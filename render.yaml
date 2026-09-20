@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: purchase-role-bot
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: DATA_DIR
+        value: /data
+      - key: ROLE_DURATION_MONTHS
+        value: "6"
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: CLIENT_ID
+        sync: false
+      - key: GUILD_ID
+        sync: false
+      - key: LOG_CHANNEL_ID
+        sync: false
+      - key: ADMIN_ROLE_ID
+        sync: false
+    disk:
+      name: purchase-data
+      mountPath: /data
+      sizeGB: 1

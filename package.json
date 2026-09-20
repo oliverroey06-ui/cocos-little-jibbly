@@ -1,0 +1,20 @@
+{
+  "name": "purchase-role-bot",
+  "version": "1.0.0",
+  "description": "Discord bot that grants purchase roles for 6 months, logs the order, and expires them automatically.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "register": "node src/commands.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": ["discord", "bot", "purchase", "roles"],
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.24.0",
+    "dotenv": "^16.4.7"
+  }
+}
